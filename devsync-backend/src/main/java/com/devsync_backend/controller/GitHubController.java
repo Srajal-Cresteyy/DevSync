@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestClient;
 import static org.springframework.security.oauth2.client.web.ClientAttributes.clientRegistrationId;
 
+
+// End point of the user repositories
 @RestController
 @RequestMapping("/api/github")
 public class GitHubController {
