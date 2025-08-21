@@ -1,0 +1,31 @@
+# ---- Java / Spring Boot ----
+/devsync-backend/target/
+/devsync-backend/.mvn/
+/devsync-backend/mvnw
+/devsync-backend/mvnw.cmd
+/devsync-backend/.classpath
+/devsync-backend/.project
+/devsync-backend/.settings/
+
+# ---- IntelliJ / Eclipse ----
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# ---- Logs ----
+*.log
+logs/
+*.out
+
+# ---- OS Files ----
+.DS_Store
+Thumbs.db
+
+# ---- Node / React (Frontend) ----
+/devsync-frontend/node_modules/
+/devsync-frontend/.next/
+/devsync-frontend/dist/
+/devsync-frontend/build/
+/devsync-frontend/.env

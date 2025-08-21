@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: devsync-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/DevSync
+    username: postgres
+    password: 12345678
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Ov23liWjpIW0B3WoqA3E
+            client-secret: 67810a9749b8ee0a1b2ae0669c3a467664bcdc80
+            scope: repo,user
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          github:
+            authorization-uri: https://github.com/login/oauth/authorize
+            token-uri: https://github.com/login/oauth/access_token
+            user-info-uri: https://api.github.com/user
+            user-name-attribute: login
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+
+
+server:
+  port: 8088
+  servlet:
+    session:
+      timeout: 4320m
+
+
+
